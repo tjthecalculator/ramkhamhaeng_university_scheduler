@@ -1,0 +1,39 @@
+{
+    "name": "ramkhamhaeng-university-scheduler",
+    "version": "1.0.0",
+    "description": "A web application for scheduling classes at Ramkhamhaeng University.",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "noder server/server.js",
+        "server": "nodemon server/server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "build": "npm run build --prefix client",
+        "postinstall": "npm install --prefix client"
+    },
+    "keywords": [
+        "react",
+        "express",
+        "mongodb",
+        "fullstack"
+    ],
+    "author": "Tawatchai Jitporn",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "concurrently": "^5.3.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.10.9",
+        "nodemon": "^2.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "^4.0.3",
+        "react-router-dom": "^5.2.0"
+    },
+    "devDependencies": {
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.4"
+    }
+}

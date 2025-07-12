@@ -1,0 +1,2 @@
+courseID, courseName, courseCredit, courseType, faculty, prerequisite
+ACC1101, "", 3, "", "", None
