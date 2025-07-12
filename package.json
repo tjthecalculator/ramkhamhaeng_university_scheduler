@@ -4,12 +4,12 @@
     "description": "A web application for scheduling classes at Ramkhamhaeng University.",
     "main": "server/server.js",
     "scripts": {
-        "start": "noder server/server.js",
+        "start": "node server/server.js",
         "server": "nodemon server/server.js",
-        "client": "npm start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "build": "npm run build --prefix client",
-        "postinstall": "npm install --prefix client"
+        "client-dev": "vite --config client/vite.config.js",
+        "dev": "concurrently \"npm run server\" \"npm run client-dev\"",
+        "client-build": "vite build --config client/vite.config.js",
+        "build": "npm run client-build"
     },
     "keywords": [
         "react",
@@ -30,7 +30,10 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-scripts": "^4.0.3",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^5.2.0",
+        "vite": "^2.6.4",
+        "vite-plugin-react": "^1.0.0",
+        "tailwindcss": "^2.2.19"
     },
     "devDependencies": {
         "concurrently": "^5.3.0",
